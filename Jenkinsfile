@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo 'Deploying...'
                 sh '''
-                    cp -r dist/* /var/www/html/
+                    sudo cp -r dist/* /var/www/html/
                     sudo systemctl restart nginx
                 '''
             }
